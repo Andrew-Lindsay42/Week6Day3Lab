@@ -31,4 +31,10 @@ Cinema.prototype.totalRunningTime = function(){
 
 }
 
+Cinema.prototype.filmsByProperty = function (property,value) {
+  return this.films.filter((film) => film[property] === value);
+};
+
+
+
 module.exports = Cinema;

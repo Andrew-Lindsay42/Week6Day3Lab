@@ -14,6 +14,7 @@ Cinema.prototype.findFilmByTitle = function(title){
 
 Cinema.prototype.findFilmByGenre = function(genre){
   return this.films.filter(film => film.genre === genre)
+  // return this.films.find(film => film.genre === genre)
 }
 
 Cinema.prototype.checkYear = function(year){
@@ -25,12 +26,8 @@ Cinema.prototype.checkLength = function(length){
 }
 
 Cinema.prototype.totalRunningTime = function(){
+
   return this.films.reduce((total,film) => total += film.length,0)
-
-}
-
-Cinema.prototype.filmsByProperty = function(property,value){
-  return this.films.filter(film[property] === value)
 
 }
 
